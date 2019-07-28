@@ -1186,7 +1186,6 @@ void XDBF::injectStringEntry(wstring wstr, unsigned long long id)
     delete[] dataToWrite;
 }
 
-
 XDBF* XDBFcreate(string filePath, GPD_Type type, char *imageData, size_t imageDataLen, wstring *gameName)
 {
     FileIO newFile(filePath);

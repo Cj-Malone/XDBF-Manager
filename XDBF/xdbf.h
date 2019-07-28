@@ -75,7 +75,7 @@ public:
     std::wstring getStringEntry(Entry *e);
 
     static std::string FILETIME_to_string(FILETIME *pft);
-    friend XDBF* XDBFcreate(string filePath, GPD_Type type, char *imageData = NULL, size_t imageDataLen = 0, wstring *gameName = NULL);
+    //friend XDBF* XDBFcreate(string filePath, GPD_Type type, char *imageData, size_t imageDataLen, wstring *gameName);
     friend void injectSyncStuff(XDBF *x, int type);
 
 private:
@@ -95,6 +95,6 @@ private:
 };
 
 bool compareFunction(Entry e1, Entry e2);
-XDBF* XDBFcreate(string filePath, GPD_Type type, char *imageData, size_t imageDataLen, wstring *gameName);
+XDBF* XDBFcreate(string filePath, GPD_Type type, char *imageData = NULL, size_t imageDataLen = 0, wstring *gameName = NULL);
 
 #endif // XDBF_H
